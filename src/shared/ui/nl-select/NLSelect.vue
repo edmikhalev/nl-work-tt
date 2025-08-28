@@ -178,7 +178,7 @@ provide(SELECET_DATA, {
 
 .nl-select__input-wrapper {
 	display: flex;
-	flex: 1 1 0%;
+	flex: 0 1 0%;
 
 	&.--typing {
 		flex: 1 0 0%;
