@@ -29,3 +29,8 @@ coverage
 
 .history/*
 *.tsbuildinfo
+/toolbox/*
+
+# env
+.env.development
+.env.production

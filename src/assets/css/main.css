@@ -1,18 +1,26 @@
 @import '../fonts/stylesheet.css';
+@import './reset.css';
+@import './helpers.css';
+@import './theme.css';
+
 :root {
-	--def-font-size: 16px;
+	--font-size: 16px;
+	--base-font: 'Futura PT';
+	--second-font: 'Futura PT Demi';
 }
 
 /** colors */
 :root {
+	--nl-primary-color: rgba(255, 168, 0, 1);
 	--c-white: #fff;
 	--c-gray-100: #f7f7f7;
+
+	--nl-text-color: rgba(39, 39, 39, 1);
+	--nl-text-light-color: rgba(151, 151, 151, 1);
 }
-/** styles reset */
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+
+:root {
+	--nl-border-radius: 5px;
 }
 
 html {
@@ -22,11 +30,17 @@ html {
 html,
 body {
 	font-family: 'Futura PT', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: var(--def-font-size);
+	font-size: var(--font-size);
 	min-height: 100vh;
 	line-height: 1.5;
 	background-color: var(--c-gray-100);
 }
+
+#app {
+	position: relative;
+	width: 100%;
+}
+
 button {
 	border: none;
 	background: none;
@@ -36,8 +50,11 @@ button {
 
 /** container */
 .container {
-	width: 1280px;
-	margin: auto;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 
 /** ui */
@@ -50,8 +67,4 @@ button {
 	align-items: center;
 	box-sizing: border-box;
 	appearance: none;
-}
-
-@media (min-width: 1280px) {
-	/* Стандартные десктопы */
 }
